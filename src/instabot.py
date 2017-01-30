@@ -12,7 +12,8 @@ import atexit
 import signal
 import itertools
 import sys
-
+if 'threading' in sys.modules:
+    del sys.modules['threading']
 from unfollow_protocol import unfollow_protocol
 
 class InstaBot:
